@@ -1,0 +1,122 @@
+Advanced Programming (Java)
+Week 2 – Exercises
+(To be completed during the week)
+
+Exercise 1: In the real world, different objects interact with each other to accomplish some tasks in a system. You must design a hospital management system. To successfully model the system for an object-oriented computer implementation, you need to do the following tasks. (5)
+
+Drugs
+-drug_id: int += 1
+-name: String = “name”
+-type: String = “type”
+-dose: double = 10
+-expiry: Date = “2024-03”
++Drugs()
++Drugs(drug_id: int, name:String, type:String, dose: double, expiry: Date)
++getCharted(): String
++getPrepared(): String
+
+1.	Identify at least 5 objects/classes (other than doctor and patient) of the system. Nurses, Drugs, Equipment, Wards, OT, 
+Nurses
+-nurse_id: int += 1
+-name: String = “name”
+-department: String = “ward”
++Nurse()
++Nurse(nurse_id:int, name:String, ward:String)
++getDrugs(): String
++getVitals(): String
+Equipment
+- equip_id: int += 1
+-name: String = “name”
+-purpose: String = “purpose”
+-condition: String = “condition”
++Equipment()
++Equipment(name:String, purpose:String)
++getInspected(): Date
+
+
+
+Wards
+-ward_id: int += 1
+-name: String = “name”
+-capacity: int = “capacity”
+-occupancy: int = “occupancy”
++Wards()
++Wards(ward_id: int, name: String, capacity: int, occupancy: int)
++getOccupancy(): int
++getNewPt(): int
++getEmptyBed(): int
+
+
+
+
+OR
+- or_id: int += 1
+-schedule: String = “schedule”
+-availability: Boolean = “available”
+-clean: Boolean = “cleaned”
++OR()
++OR(or_id: int, schedule:String, availability: Boolean, clean: Boolean)
++getSurgeryAppt (): Date
++getCleaned(): Boolean
++getAvailability(): Boolean
+
+2.	Identify the relevant attributes and behaviours of following classes
+a.	Doctor
+b.	Patient
+Doctor
+- dr_id: int += 1
+-name: String = “name”
+-specialty: String = “specialty”
+-availability: Boolean = “available”
++Doctor()
++Doctor(dr_id: int, name: String, speciality:String, available: boolean)
++getAvailability(): Date
++getPaged(): String
+Patient
+- pt_id: int += 1
+-name: String = “name”
+-ward: String = “ward”
+-illness: String = “illness”
+-condition: String = “condition”
++Patient()
++Patient(pt_id: int, name: String, ward: String, illness: String, condition: String)
++getCondition(): String
++getVitals(): String
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exercise 2 : The Rectangle Class
+ 
+1.	Write java code for the Rectangle class above. (Rectangle.java)
+2.	Write a test program called TestRectangle (in another source file called TestRectangle.java) which uses the Rectangle class. Create two Rectangle objects by using parameterised constructor defined in Rectangle class. Calculate and display Area and Perimeter of each Rectangle.
+ 
+Exercise 3 : The Employee Class
+
+ 
+1.	Write java code for the Employee class, shown above. (Employee.java)
+2.	Write a test program called TestEmployee (in another source file called TestEmployee.java) which uses the Employee class. Create two Employee objects (John and James) by using constructors defined in Employee class. Set their Salaries as $4500 and $5000 respectively. Print the Annual salaries of both employees. Give them both 20% raise in salary and print the new salaries of both John and James.
+ 
+Exercise 4 : The InvoiceItem Class
+ 
+
+1.	Write java code for the Invoice class, shown above. (Invoice.java)
+2.	Write a test program called TestInvoice which uses the Invoice class. 
+3.	Add a static variable InvoiceCount and increment it every time an invoice is created.
+4.	Add a copy constructor, that accepts an invoice item’s object and creates its copy.
+5.	Create as many invoices invoices you can in TestInvoice main method, all with different values. 
+6.	Call toString method for each invoice and also print number of invoices that have been generated at the end.
+
+

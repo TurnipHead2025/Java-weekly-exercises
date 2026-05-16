@@ -1,0 +1,12 @@
+// Sheri Evangelene
+// May 11-16 2026
+// week 2 exercises Java
+
+
+1. Nurses, Drugs, Equipment, OR
+
+2. Dotor attributes= name, soecialty, availibility
+   Doctor Behaviour= paged
+
+   Patient attributes= name, ward, illness, condition
+   Patient behaviour= vitals
