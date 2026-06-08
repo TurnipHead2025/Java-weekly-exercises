@@ -38,6 +38,11 @@ public class MyCircle {
         return center.getY();
     }
 
+    // set array.int[]. Should have set the new array to 2? []
+    //int a[]=new int[2]
+    //a[0]= this.center.getx();
+    //a[1]= this.center.gety();
+    //return a;
     public int[] getCenterXY(){
         return new int[]{center.getX(), center.getY()};
     }
@@ -77,6 +82,7 @@ public class MyCircle {
         return 2 * Math.PI * this.radius;
     }
 
+    // this.center of the circle calling the method
     public double distance(MyCircle another){
         return this.center.distance(another.center);
     }

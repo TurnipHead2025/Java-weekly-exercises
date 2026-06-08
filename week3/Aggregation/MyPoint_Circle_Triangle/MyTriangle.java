@@ -2,7 +2,7 @@
 //Week 3 exercises-Java
 //May 18-24, 2026
 
-public class MyTriangle {
+public class MyTriangle { //each point on the triangle has an x&Y axis point, for each of its 3 points.
     private MyPoint v1;
     private MyPoint v2;
     private MyPoint v3;
@@ -23,6 +23,7 @@ public class MyTriangle {
     } 
 
 //toString
+//Why did I add tostring()?? Dr. Malik didn't
     public String toString(){
         return "MyTriangle[v1=" + v1.toString() + ", v2= " + v2.toString()  + ", v3= " + v3.toString() + "]";
     }   
