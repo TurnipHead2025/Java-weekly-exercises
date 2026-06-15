@@ -1,0 +1,43 @@
+
+
+
+
+a-Can an instance method override a static method?
+ ANSWER: No. A static method uses Static Binding at complie time and exisits at the class level (method area). Instance methods are executed at runtime (heap area) and uses Dynamic Binding. Static methods are already held in memory by runtime and cannot be changed. 
+
+b- Can a static method override (hide) an instance method?
+ANSWER: No it cannot. A child can only override a parent if they both have dynamic binding (an instance method). The JVM doesn't know how to dynamically bind a static method at runtime because static methods don't live on the Heap.
+
+c- Can you override a final instance method?
+No. Final is a modifier that makes a method unchangable. Even though a final instance method uses Dynamic Binding and lives on the Heap, the Java compiler strictly enforces the security rules of the final keyword.
+
+d- Can you override an instance method and make it final?
+Yes. And instance method uses dynamic binding (lives on the heap). When it executes at runtime it is not changing the parent class but restricting modification of any future grandchildren (subclasses). 
+
+e- Can you override an instance method and change its return type?
+Generally prohibited unless the return type is a class and furthermore a subclass of the parent(Covariant Return Type)
+
+f- Can you hide a final static method ?
+No. the final modifier strictly prohibits a child class from modifying or replacing the parent's body (implementation). If you try to hide a static method that is marked final, the compiler throws an error because final means it cannot be overridden or hidden.
+
+g- Can an instance field hide a static field?
+Yes. All variables use static binding. the compiler always looks at the most immediate, local blueprint first. Which would be the child variable. That hides the parent variable.The compiler only cares about the matching names, so it doesn't matter that one is static and the other is an instance variable.
+
+h- Can a static field hide an instance field?
+Yes. All variables use static binding. the compiler always looks at the most immediate, local blueprint first. Which would be the child variable. That hides the parent variable.The compiler only cares about the matching names, so it doesn't matter that one is static and the other is an instance variable.
+
+i- Can an instance method with public visibility override an instance method with default visibility?
+Yes. A child class is always allowed to make an overridden method more public, it just cannot make it more private than the parent's original version. Since public is more open than default (package-private), this is completely valid.
+
+j- Can an instance method with default visibility override an instance method with public visibility?
+No. Because you cannot reduce the visibality of an inherited method
+
+k- Can an instance method with protected visibility override an instance method with default visibility?
+Yes. protected is more visible than private. A child class can make an override method more public
+
+l- Can an instance method with default visibility override an instance method with protected visibility?
+No. Because you cannot reduce the visibality of an inherited method
+
+m- Based on the last four question, order the access visibility from the widest to the narrowest (weakest) and state the rule for overriding (instance methods) or hiding (static methods) ?
+public-->protected-->default-->private
+The Rule: For both overriding (instance methods) and hiding (static methods), you can never make the child's method more private than it originally was in the parent class, but you can always make it more public.
