@@ -48,6 +48,7 @@ public class Circle {
 
     
 //ToString
+    @Override
     public String toString(){
         return ("Circle Radius = " + this.radius + " has color = " + this.color);
     }
